@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-wrapper">
+                <div class="calculator">
+                <header>
+                    <button id="theme-toggle">
+                        <img src="assets/icon-moon.svg" alt="Toggle theme" id="theme-icon">
+                    </button>
+                </header>
+                <form>
+                    <div class="display">
+                        <div id="live-result"></div>
+                        <input type="text" id="input" name="display" readonly />
+                        
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="clearInput()" class="operator">
+                        <input type="button" value="DE" onclick="deleteLast()" class="operator">
+                        <input type="button" value="." onclick="append('.')" class="operator">
+                        <input type="button" value="/" onclick="append('/')" class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="append('7')">
+                        <input type="button" value="8" onclick="append('8')">
+                        <input type="button" value="9" onclick="append('9')">
+                        <input type="button" value="*" onclick="append('*')" class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="append('4')">
+                        <input type="button" value="5" onclick="append('5')">
+                        <input type="button" value="6" onclick="append('6')">
+                        <input type="button" value="-" onclick="append('-')" class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="append('1')">
+                        <input type="button" value="2" onclick="append('2')" >
+                        <input type="button" value="3" onclick="append('3')">
+                        <input type="button" value="+" onclick="append('+')" class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="append('00')"> 
+                        <input type="button" value="0" onclick="append('0')">
+                        <input type="button" value="=" class="equal operator" onclick="calculate()">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+        <section class="history">
+            <h2>History</h2>
+            <ul id="history-list"></ul>
+            
+        </section>
+        <button onclick="clearHistory()" class="clear-history">Clear History</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
