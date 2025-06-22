@@ -94,7 +94,7 @@ function clearHistory() {
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   const isDark = document.body.classList.contains("dark");
-  themeIcon.src = isDark ? "assets/icon-sun.svg" : "assets/icon-moon.svg";
+  themeIcon.src = isDark ? "assets/images/icon-sun.svg" : "assets/images/icon-moon.svg";
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
